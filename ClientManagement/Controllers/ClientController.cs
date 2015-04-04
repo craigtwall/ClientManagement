@@ -19,6 +19,9 @@ namespace ClientManagement.Controllers
         public ActionResult Index()
         {
             var clients = db.Clients.Include(p => p.Agency);
+
+            // Inserting Something Here to Test GitHub push/pulling
+
             return View(db.Clients.ToList());
         }
 
